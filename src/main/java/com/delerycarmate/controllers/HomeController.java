@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
-//controller class
+
+    //Homecontroller class
     @GetMapping("/")
     public String showHomePage() {
         return "index";
