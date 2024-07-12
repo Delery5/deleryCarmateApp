@@ -14,7 +14,7 @@
     <property name="suffix" value=".jsp" />
   </bean>
 
-  <bean id="homeController" class="com.delerycarmate.controllers.HomeController"/>
+  <bean id="homeController" class="com.delerycarmate.controller.HomeController"/>
 
 </beans>
 

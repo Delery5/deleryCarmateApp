@@ -1,4 +1,4 @@
-package com.delerycarmate.controllers;
+package com.delerycarmate.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
