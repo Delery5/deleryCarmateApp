@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://www.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
@@ -10,7 +10,6 @@
   <packaging>war</packaging>
 
   <name>deleryCarmateApp Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
@@ -26,10 +25,31 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-    <!-- Spring MVC -->
+
+    <!-- Spring Framework Dependencies -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
+      <version>4.3.15.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>4.3.15.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>4.3.15.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>4.3.15.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
       <version>4.3.15.RELEASE</version>
     </dependency>
 
@@ -54,17 +74,44 @@
       <artifactId>jackson-databind</artifactId>
       <version>2.9.8</version>
     </dependency>
+
+    <!-- Hibernate dependency -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.2.17.Final</version>
+    </dependency>
+
+    <!-- MySQL dependency -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.28</version>
+    </dependency>
+
+    <!-- Joda-Time dependency -->
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>2.10.10</version>
+    </dependency>
+
+    <!-- To map JodaTime with database type -->
+    <dependency>
+      <groupId>org.jadira.usertype</groupId>
+      <artifactId>usertype.core</artifactId>
+      <version>3.2.0.GA</version>
+    </dependency>
   </dependencies>
 
   <build>
     <finalName>deleryCarmateApp</finalName>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <pluginManagement>
       <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
@@ -93,3 +140,4 @@
     </pluginManagement>
   </build>
 </project>
+
